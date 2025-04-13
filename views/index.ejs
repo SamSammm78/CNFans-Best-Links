@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liens CNFans</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <a href="/"><h1>CNFans Best Links</h1></a>
+    <nav>
+        <ul>
+            <li><a href="/category/0">T-Shirts</a></li> 
+            <li><a href="/category/1">Hoodies/Sweaters</a></li>
+            <li><a href="/category/2">Shoes</a></li>
+            <li><a href="/category/3">Jackets</a></li>
+            <li><a href="/category/4">Pants/Shorts</a></li>
+            <li><a href="/category/5">Headwear</a></li>
+            <li><a href="/category/6">Accessories</a></li>
+        </ul>
+    </nav>
+  <div class="product-grid">
+    <% liens.forEach(lien => { %>
+      <div class="product-card">
+        <img src="<%= lien[2] %>" alt="Image">
+        <div class="product-name"><%= lien[1] %></div>
+        <div class="product-price"><%= lien[4] || "Prix non dispo" %></div>
+        <a href="<%= lien[3] %>" class="product-link" target="_blank">Voir</a>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
