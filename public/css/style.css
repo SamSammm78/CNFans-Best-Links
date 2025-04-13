@@ -1,107 +1,146 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+* {
     margin: 0;
-    padding: 20px;
-  }
-  
-  h1 {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+header {
     text-align: center;
     margin-bottom: 40px;
-  }
-  
-  .product-grid {
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Container Flex */
+.container {
+    display: flex;
+    height: 100vh; /* Utilise toute la hauteur de l'écran */
+}
+
+/* Menu - Div Fixe */
+.menu {
+    width: 25%; /* 1/4 de la largeur */
+    height: 100%; /* Occupe toute la hauteur de la fenêtre */
+    position: fixed; /* La div1 est fixe */
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    z-index: 10;
+}
+nav {
+    padding-top: 5%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ecf0f1;
+}
+
+/* Grid des Produits */
+.product-grid {
+    margin-left: 25%; /* La div2 commence après la div1 */
+    padding: 20px;
+    overflow-y: scroll; /* Permet le scroll vertical */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Largeur fixe avec un peu d'espace */
-    gap: 20px; /* Espacement entre les cartes */
-    justify-content: center; /* Centrer les cartes horizontalement */
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .product-card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px;  /* Largeur fixe */
-    height: auto;  /* Hauteur flexible en fonction du contenu */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur chaque ligne */
+    gap: 20px; 
+    justify-content: center; 
+    max-width: 75%;
+    height: 100vh;
+}
+
+/* Carte Produit */
+.product-card {
+    background-color: black;
+    border: 1px solid #ccc;
+    width: 100%;  
+    height: auto;  
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 16px;
     text-align: center;
     transition: transform 0.2s ease;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .product-card img {
-    width: 100%;
-    height: 180px; /* Limiter la taille de l'image */
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .product-name {
+}
+
+.product-card img {
+    width: 100%;  
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-name {
     font-weight: bold;
     margin: 12px 0 6px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
-  
-  .product-price {
-    color: #27ae60;
+}
+
+.product-price {
+    color: white;
     margin-bottom: 12px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
-  
-  .product-link {
+}
+
+.product-link {
     display: inline-block;
-    background-color: #3498db;
+    background-color: #6400da;
     color: white;
     padding: 8px 12px;
-    border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.2s ease;
-  }
-  
-  .product-link:hover {
-    background-color: #2980b9;
-  }
-  
-/* Navbar */
-nav {
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin-bottom: 40px; /* Espacement en bas pour les autres éléments */
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center; /* Centrer les liens */
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-  }
-a {
-    color: black;
-    text-decoration: none;
+}
+
+.product-link:hover {
+    background-color: #4a00a6;
+}
+
+/* Cacher la scrollbar partout */
+* {
+  scrollbar-width: none; /* Firefox : Cache la scrollbar */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ : Cache la scrollbar */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge : Cache la scrollbar */
 }

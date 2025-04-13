@@ -1,4 +1,5 @@
-# CNFans Best Links
+# SM Links
+## CNFans Best Links
 
 This project is a web application that displays categorized product links fetched from a Google Spreadsheet. It is built using Node.js, Express, and EJS for server-side rendering.
 

@@ -37,6 +37,7 @@ app.get('/category/:type', async (req, res) => {
     res.render('index', { liens: filteredLiens });
 });
 
+
 app.listen(3000, () => {
     console.log('Serveur lancé sur http://localhost:3000');
 });

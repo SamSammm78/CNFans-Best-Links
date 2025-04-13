@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liens CNFans</title>
+    <title>SM Links</title>
+    <link rel="icon" href="/icons/icon.png" type="image/png">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <a href="/"><h1>CNFans Best Links</h1></a>
+  <div class="container">
+  <div class="menu">
+    <a href="/"><h1>SM Links</h1></a>
+    <h3>CNFans Best Links</h3>
     <nav>
         <ul>
             <li><a href="/category/0">T-Shirts</a></li> 
@@ -19,6 +23,8 @@
             <li><a href="/category/6">Accessories</a></li>
         </ul>
     </nav>
+  </div>
+    
   <div class="product-grid">
     <% liens.forEach(lien => { %>
       <div class="product-card">
@@ -29,5 +35,7 @@
       </div>
     <% }) %>
   </div>
+
+</div>
 </body>
 </html>
