@@ -2,7 +2,7 @@
   "name": "smlinks",
   "version": "1.0.0",
   "description": "CNFans Best Links",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "node ."
   },
