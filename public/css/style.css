@@ -71,66 +71,68 @@ nav {
     color: #ecf0f1;
 }
 
-/* Grid des Produits */
 .product-grid {
     margin-left: 25%; /* La div2 commence après la div1 */
     padding: 20px;
-    overflow-y: scroll; /* Permet le scroll vertical */
+    overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur chaque ligne */
-    gap: 20px; 
-    justify-content: center; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px; 
+    justify-content: center;
     max-width: 75%;
     height: 100vh;
+    align-items: start;
 }
 
-/* Carte Produit */
 .product-card {
-  background-color: black;
-  border: 1px solid #ccc;
-  width: 100%;  
-  max-height: 400px; /* Limite la hauteur des cartes */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 16px;
-  text-align: center;
-  transition: transform 0.2s ease;
-  overflow: hidden; /* Cache le débordement */
+    background-color: black;
+    border: 1px solid #ccc;
+    width: 100%;  /* Assurer que la carte prend toute la largeur de la cellule */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    overflow: hidden;
 }
-
 
 .product-card img {
-    width: 100%;  
-    height: 100%;
+    width: 100%;
+    max-height: 250px;  /* Augmenter la hauteur de l'image */
     object-fit: contain;
-    display: block;
-    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .product-name {
     font-weight: bold;
-    margin: 12px 0 6px;
-    overflow: hidden;
+    font-size: 1rem;
+    margin-bottom: 6px;
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }
 
 .product-price {
     color: white;
-    margin-bottom: 12px;
-    overflow: hidden;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }
 
 .product-link {
-    display: inline-block;
     background-color: #6400da;
     color: white;
     padding: 8px 12px;
     text-decoration: none;
     transition: background-color 0.2s ease;
+    align-self: center;
 }
 
 .product-link:hover {
